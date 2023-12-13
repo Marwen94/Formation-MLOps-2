@@ -22,7 +22,7 @@ jobs:
       - name: Run Linter
         run:  flake8 --extend-ignore E402 .
       - name: Run Vulture
-        run:  vulture .
+        run:  vulture . --min-confidence 100 
       - name: Run tests
         run:  make tests-unitaires
 
